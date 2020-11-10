@@ -66,9 +66,9 @@ docker-compose exec -u postgres postgres psql -v ON_ERROR_STOP=1 -f /git/covid19
 ## Import OSM data
 
 ```
-docker-compose run osm_imposm bash -c "
-    cd /git/covid19_map/db/
-    ./import_imposm.sh  https://download.geofabrik.de/europe/andorra-latest.osm.pbf
+docker-compose run --rm osm_imposm bash -c "
+    cd /git/covid19_map/db/ && \
+    ./import_imposm.sh https://download.geofabrik.de/europe/andorra-latest.osm.pbf && \
     ./cron_refresh_db.sh
 "
 ```
@@ -96,8 +96,8 @@ docker-compose up -d front
 
 ## Update
 
-docker-compose run osm_imposm bash -c "
-    cd /git/covid19_map/db/
-    ./update_imposm.sh
+docker-compose run --rm osm_imposm bash -c "
+    cd /git/covid19_map/db/ && \
+    ./update_imposm.sh && \
     ./cron_refresh_db.sh
 "
