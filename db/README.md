@@ -79,11 +79,13 @@ The postgres database is used by pg_tileserv, pg_featureserv and caresteouvert_b
 Running:
 - pg_tileserv, default on port 7800, serve on tiles.caresteouvert.fr
 - pg_featureserv, default on port 9000, serve on features.caresteouvert.fr
-- caresteouvert_backend
+- geoip, default on port 9090, serve on geo.caresteouvert.fr
+- caresteouvert_backend, default on port 8080, serve on api.caresteouvert.fr
 
 ```
 docker-compose up -d pg_tileserv
 docker-compose up -d pg_featureserv
+docker-compose up -d geoip
 docker-compose up -d web
 docker-compose up -d worker
 ```

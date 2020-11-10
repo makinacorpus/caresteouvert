@@ -69,6 +69,14 @@ services:
       - 9000:9000
     restart: always
 
+  geoip:
+    build:
+      context: geoip
+    environment:
+      PORT: 9090
+    ports:
+      - 9090:9090
+
   web:
     build:
       context: caresteouvert_backend
