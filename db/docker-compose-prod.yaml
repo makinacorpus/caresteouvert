@@ -2,10 +2,10 @@ version: '3.7'
 
 services:
   geoip:
-    image: makinacorpus/caresteouvert-geoip:latest
+    image: ${DOCKER_REGISTRY}/caresteouvert-geoip:latest
   web:
-    image: makinacorpus/caresteouvert-back:latest
+    image: ${DOCKER_REGISTRY}/caresteouvert-back:latest
   worker:
-    image: makinacorpus/caresteouvert-back:latest
+    image: ${DOCKER_REGISTRY}/caresteouvert-back:latest
   front:
-    image: makinacorpus/caresteouvert-front:latest
+    image: ${DOCKER_REGISTRY}/caresteouvert-front:latest
