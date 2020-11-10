@@ -93,6 +93,7 @@ services:
     environment:
       <<: *common-environment
       <<: *osm-access-environment
+      NOSSL: 1
     restart: always
     command: npm run start:osm
 
