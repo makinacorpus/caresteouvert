@@ -2,6 +2,12 @@
 
 ## Build
 
+Copy `.env.example` as `.env` and adjust settings.
+
+```
+git clone https://github.com/osmontrouge/caresteouvert_backend.git
+```
+
 ```
 docker-compose build
 ```
@@ -53,10 +59,6 @@ sample for France (code FR) : ./update_imposm_with_country.sh postgres://usernam
 ## caresteouvert_backend
 
 ```
-git clone https://github.com/osmontrouge/caresteouvert_backend.git
-```
-
-```
 docker-compose exec -u postgres postgres psql -v ON_ERROR_STOP=1 -f /git/covid19_map/db/caresteouvert_backend/src/init.sql
 ```
 
@@ -88,6 +90,7 @@ docker-compose up -d pg_featureserv
 docker-compose up -d geoip
 docker-compose up -d web
 docker-compose up -d worker
+docker-compose up -d front
 ```
 
 
