@@ -166,7 +166,7 @@ import parseId from '../../lib/parse_id';
 import { getRecentContribution } from '../../lib/recent_contributions';
 import isMobile from '../mixins/is_mobile';
 import placeMixin from '../mixins/place';
-import DetailHygiene from './detail_hygiene';
+// import DetailHygiene from './detail_hygiene';
 import DetailLink from './detail_link';
 import DetailOpeningHours from './detail_opening_hours';
 import DetailState from './detail_state';
@@ -185,7 +185,7 @@ const CONTACTS = {
 
 export default {
   components: {
-    DetailHygiene,
+    // DetailHygiene,
     DetailLink,
     DetailOpeningHours,
     DetailState,
