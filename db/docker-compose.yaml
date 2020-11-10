@@ -98,5 +98,5 @@ services:
 
   front:
     ports:
-      - "${WEB_PORT:-8081}:1234"
+      - "${FRONT_PORT:-8081}:1234"
     restart: always
